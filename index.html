@@ -1,52 +1,37 @@
-// Import stylesheets
-import './style.css';
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import * as firebase from "firebase/app";
+<head>
+  <meta charset="utf-8">
+  <title>Firebase Meetup</title>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-// Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/firestore";
+<body>
+<div id="app">
+ 
+  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/firestore.png?alt=media&token=56d039dc-4a6c-477b-a153-a4bb8234646f" /> -->
+  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/hosting.png?alt=media&token=57c8adb6-08c4-43f7-9395-4c299896a36c" /> -->
+  <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/codelab.png?alt=media&token=f45f808c-ce40-4b34-944c-8d8fac00e13d" />
 
-import * as firebaseui from 'firebaseui';
+ <section id="event-details-container">
+      <h1>Firebase Meetup</h1>
 
-// Document elements
-const startRsvpButton = document.getElementById('startRsvp');
-const guestbookContainer = document.getElementById('guestbook-container');
+      <p><i class="material-icons">calendar_today</i> October 30</p>
+      <p><i class="material-icons">location_city</i> San Francisco</p>
+  </section>
 
-const form = document.getElementById('leave-message');
-const input = document.getElementById('message');
-const guestbook = document.getElementById('guestbook');
-const numberAttending = document.getElementById('number-attending');
-const rsvpYes = document.getElementById('rsvp-yes');
-const rsvpNo = document.getElementById('rsvp-no');
+  <hr>
 
-var rsvpListener = null;
-var guestbookListener = null;
+  <section id="firebaseui-auth-container"></section>
 
-async function main() {
+  <section id="description-container">
+      <h2>What we'll be doing</h2>
+      <p>Join us for a day full of Firebase Workshops and Pizza!</p>
+  </section>
 
-  // Add Firebase project configuration object here
-  // var firebaseConfig = {};
+  <section id="guestbook-container">
+  </section>
 
-  // firebase.initializeApp(firebaseConfig);
-
-  // FirebaseUI config
-  const uiConfig = {
-    credentialHelper: firebaseui.auth.CredentialHelper.NONE,
-    signInOptions: [
-      // Email / Password Provider.
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-        // Handle sign-in.
-        // Return false to avoid redirect.
-        return false;
-      }
-    }
-  };
-
-  // const ui = new firebaseui.auth.AuthUI(firebase.auth());
-}
-main();
-
+</div>
+</body>
