@@ -1,6 +1,6 @@
-/*# worldcalls
+# worldcalls
 home directory folder
-# WTM Summit 2019 Firebase Workshop*/
+# WTM Summit 2019 Firebase Workshop
 
 Check out each step:
 * https://stackblitz.com/edit/wtm-start
